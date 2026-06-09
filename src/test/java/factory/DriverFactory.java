@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class DriverFactory {
 
     private static WebDriver driver;
-
+//this method is to initialize the driver
     public static WebDriver initDriver() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
