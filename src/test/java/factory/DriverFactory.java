@@ -8,6 +8,7 @@ public class DriverFactory {
 
     private static WebDriver driver;
 //this method is to initialize the driver
+    //method return, diff between static and normal variable, passing parameters in method, creating an obj
     public static WebDriver initDriver() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
