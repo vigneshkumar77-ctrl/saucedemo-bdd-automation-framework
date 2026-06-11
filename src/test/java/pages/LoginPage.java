@@ -24,8 +24,9 @@ public class LoginPage {
         driver.findElement(password).sendKeys(pass);
     }
 
-    public void clickLogin() {
+    public void clickLogin() throws InterruptedException {
         driver.findElement(loginButton).click();
+        Thread.sleep(3000);
     }
 
     public boolean isHomePageDisplayed() {

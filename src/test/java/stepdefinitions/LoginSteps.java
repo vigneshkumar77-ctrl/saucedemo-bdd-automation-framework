@@ -22,12 +22,12 @@ public class LoginSteps {
     }
 
     @And("user clicks on login button")
-    public void user_clicks_on_login_button() {
+    public void user_clicks_on_login_button() throws InterruptedException {
         loginPage.clickLogin();
     }
 
     @Then("user should be navigated to home page")
     public void user_should_be_navigated_to_home_page() {
-        Assert.assertTrue(loginPage.isHomePageDisplayed());
+        Assert.assertTrue(loginPage.isHomePageDisplayed(),"the product title is available in homepage");
     }
 }
