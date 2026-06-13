@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 public class LoginPage {
 
@@ -11,6 +12,7 @@ public class LoginPage {
     private By password = By.id("password");
     private By loginButton = By.id("login-button");
     private By productsTitle = By.className("title");
+    private By loginError = By.tagName("h3");
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
@@ -31,5 +33,11 @@ public class LoginPage {
 
     public boolean isHomePageDisplayed() {
         return driver.findElement(productsTitle).isDisplayed();
+    }
+
+    public void loginErrorMessageValidation(){
+
+        String errorMsg= driver.findElement(loginError).getText();
+        Assert.assertEquals(errorMsg,"Epic sadface: Username and password do not match any user in this service");
     }
 }

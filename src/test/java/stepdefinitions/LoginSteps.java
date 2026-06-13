@@ -1,6 +1,7 @@
 package stepdefinitions;
 
 import factory.DriverFactory;
+import io.cucumber.java.PendingException;
 import io.cucumber.java.en.*;
 import org.testng.Assert;
 import pages.LoginPage;
@@ -29,5 +30,11 @@ public class LoginSteps {
     @Then("user should be navigated to home page")
     public void user_should_be_navigated_to_home_page() {
         Assert.assertTrue(loginPage.isHomePageDisplayed(),"the product title is available in homepage");
+    }
+
+    @Then("user should be informed with an error message")
+    public void userShouldBeInformedWithAnErrorMessage() {
+        loginPage.loginErrorMessageValidation();
+
     }
 }
