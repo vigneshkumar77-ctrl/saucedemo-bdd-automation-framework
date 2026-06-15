@@ -9,13 +9,15 @@ public class ProductPage {
 
     private WebDriver driver;
 
-    public ProductPage(WebDriver Driver){
+    public ProductPage(WebDriver driver)
+    {
         this.driver = driver;
         PageFactory.initElements(driver, this);
+
     }
 
     public void verifyingProduct(String productText) {
-        String pt = driver.findElement(By.id("Products")).getText();
+        String pt = driver.findElement(By.xpath("//span[text()='Products']")).getText();
         System.out.println(pt);
     }
 
