@@ -7,10 +7,7 @@ import pages.LoginPage;
 import pages.ProductPage;
 
 public class ProductSteps {
-    ProductPage productPage;
-     public ProductSteps(){
-         productPage = new ProductPage(DriverFactory.getDriver());
-     }
+    ProductPage productPage = new ProductPage(DriverFactory.getDriver());
 
 
     @Then("page title should be {string}")
