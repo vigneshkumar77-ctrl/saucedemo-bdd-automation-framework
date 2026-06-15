@@ -5,8 +5,8 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = "src/test/resources/features",
-        tags = "@invalid",
-        glue = {"stepdefinitions", "hooks"},
+        tags = "@product",
+glue = {"stepdefinitions", "hooks"},
         plugin = {
                 "pretty",
                 "html:target/cucumber-report.html"
